@@ -1,7 +1,5 @@
 package ehu.isad;
 
-import ehu.isad.controller.ui.NagusiaKud;
-import ehu.isad.controller.ui.EzarpenakKud;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,11 +12,13 @@ public class Main extends Application {
 
   private Parent nagusiaUI;
   private Parent ezarpenakUI;
+  private Parent tableviewUI;
 
   private Stage stage;
 
   private NagusiaKud nagusiaKud;
   private EzarpenakKud ezarpenakKud;
+  private StudentsController studentsController;
 
 
   @Override
@@ -27,8 +27,12 @@ public class Main extends Application {
     stage = primaryStage;
     pantailakKargatu();
 
-    stage.setTitle("Ezarpenak lortu");
-    stage.setScene(new Scene(nagusiaUI, 450, 275));
+//    stage.setTitle("Ezarpenak lortu");
+//    stage.setScene(new Scene(nagusiaUI, 450, 275));
+//    stage.show();
+
+    stage.setTitle("Taulak probatzen");
+    stage.setScene(new Scene(tableviewUI, 450, 275));
     stage.show();
   }
 
@@ -43,6 +47,11 @@ public class Main extends Application {
     ezarpenakUI = (Parent) loaderMain.load();
     ezarpenakKud = loaderMain.getController();
     ezarpenakKud.setMainApp(this);
+
+    FXMLLoader loaderTableView = new FXMLLoader(getClass().getResource("/tableview.fxml"));
+    tableviewUI = (Parent) loaderTableView.load();
+    studentsController = loaderTableView.getController();
+    studentsController.setMainApp(this);
   }
 
 
