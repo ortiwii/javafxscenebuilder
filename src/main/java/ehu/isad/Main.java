@@ -1,5 +1,6 @@
 package ehu.isad;
 
+import ehu.isad.controller.ui.BozkatuController;
 import ehu.isad.controller.ui.HasieraController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,11 +13,15 @@ import java.io.IOException;
 public class Main extends Application {
 
   private Parent hasieraUI;
+  private Parent bozkatuUI;
 
   private Stage stage;
 
-  private HasieraController hasieraKud;
+  private Scene hasieraScene;
+  private Scene bozkatuScene;
 
+  private HasieraController hasieraKud;
+  private BozkatuController bozkatuKud;
 
   @Override
   public void start(Stage primaryStage) throws Exception {
@@ -25,7 +30,7 @@ public class Main extends Application {
     pantailakKargatu();
 
     stage.setTitle("EUROVISION");
-    stage.setScene(new Scene(hasieraUI));
+    stage.setScene(hasieraScene);
     stage.show();
   }
 
@@ -35,11 +40,14 @@ public class Main extends Application {
     hasieraUI = (Parent) loaderHasiera.load();
     hasieraKud = loaderHasiera.getController();
     hasieraKud.setMainApp(this);
+    hasieraScene = new Scene(hasieraUI);
 
-//    FXMLLoader loaderKautotu = new FXMLLoader(getClass().getResource("/NagusiaUI.fxml"));
-//    nagusiaUI = (Parent) loaderKautotu.load();
-//    nagusiaKud = loaderKautotu.getController();
-//    nagusiaKud.setMainApp(this);
+
+    FXMLLoader loaderBozkatu = new FXMLLoader(getClass().getResource("/bozkatu.fxml"));
+    bozkatuUI = (Parent) loaderBozkatu.load();
+    bozkatuKud = loaderBozkatu.getController();
+    bozkatuKud.setMainApp(this);
+    bozkatuScene = new Scene(bozkatuUI);
 //
 //    FXMLLoader loaderMain = new FXMLLoader(getClass().getResource("/EzarpenakUI.fxml"));
 //    ezarpenakUI = (Parent) loaderMain.load();
@@ -47,8 +55,10 @@ public class Main extends Application {
 //    ezarpenakKud.setMainApp(this);
   }
 
-  public void bozkatzeraAldatu(){
-
+  public void herrialdeaAukeratuMenua(){
+    stage.setScene(bozkatuScene);
+    stage.setTitle("Informazioaren Eguneraketa");
+    stage.show();
   }
   public static void main(String[] args) {
     launch(args);

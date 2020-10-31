@@ -21,7 +21,7 @@ public class EurobisioaDBKud {
 
   public List<Herrialdea> herrialdeakLortu(){
       List<Herrialdea> emaitza = new ArrayList<>();
-      String query = "SELECT izena, bandera FROM Herrialdea;";
+      String query = "SELECT izena, bandera FROM Herrialde;";
       ResultSet rs = DBKudeatzaile.getInstantzia().execSQL(query);
       try{
           while(rs.next()){

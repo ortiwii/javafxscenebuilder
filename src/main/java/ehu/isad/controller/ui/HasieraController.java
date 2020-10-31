@@ -24,7 +24,7 @@ public class HasieraController {
 
     @FXML
     void onClick(ActionEvent event) {
-        System.out.println("BOZKATU");
+        this.main.herrialdeaAukeratuMenua();
     }
 
     @FXML
