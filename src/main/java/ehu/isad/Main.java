@@ -25,7 +25,7 @@ public class Main extends Application {
     pantailakKargatu();
 
     stage.setTitle("EUROVISION");
-    stage.setScene(new Scene(hasieraUI, 450, 275));
+    stage.setScene(new Scene(hasieraUI));
     stage.show();
   }
 
@@ -35,11 +35,22 @@ public class Main extends Application {
     hasieraUI = (Parent) loaderHasiera.load();
     hasieraKud = loaderHasiera.getController();
     hasieraKud.setMainApp(this);
+
+//    FXMLLoader loaderKautotu = new FXMLLoader(getClass().getResource("/NagusiaUI.fxml"));
+//    nagusiaUI = (Parent) loaderKautotu.load();
+//    nagusiaKud = loaderKautotu.getController();
+//    nagusiaKud.setMainApp(this);
+//
+//    FXMLLoader loaderMain = new FXMLLoader(getClass().getResource("/EzarpenakUI.fxml"));
+//    ezarpenakUI = (Parent) loaderMain.load();
+//    ezarpenakKud = loaderMain.getController();
+//    ezarpenakKud.setMainApp(this);
   }
 
+  public void bozkatzeraAldatu(){
 
+  }
   public static void main(String[] args) {
     launch(args);
   }
-
 }

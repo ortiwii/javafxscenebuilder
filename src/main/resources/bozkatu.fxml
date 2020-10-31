@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controller.ui.BozkatuController">
+   <children>
+      <ImageView fitHeight="146.0" fitWidth="263.0" layoutX="169.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@irudiak/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="158.0" layoutY="110.0" prefHeight="57.0" prefWidth="286.0" text=" Aukeratu zein herrialdeak ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="150.0" prefHeight="18.0" prefWidth="279.0" text="egin nahi duen bozkaketa:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbox" layoutX="162.0" layoutY="200.0" prefHeight="35.0" prefWidth="279.0" />
+   </children>
+</AnchorPane>

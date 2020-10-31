@@ -7,6 +7,7 @@ import ehu.isad.Main;
 import ehu.isad.utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class HasieraController {
@@ -28,7 +29,7 @@ public class HasieraController {
 
     @FXML
     void initialize() {
-        irudia.setImage(Utils.getUtils().irekiIrudia("logo.png"));
+//        irudia.setImage(Utils.getUtils().irekiIrudia("logo.png"));
     }
     public void setMainApp(Main nMain){
         this.main = nMain;
