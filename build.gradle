@@ -34,7 +34,7 @@ mainClassName = "$moduleName/ehu.isad.Main"
 
 javafx {
     version = "12"
-    modules = [ 'javafx.graphics', 'javafx.fxml', 'javafx.controls']
+    modules = [ 'javafx.graphics', 'javafx.fxml', 'javafx.controls', 'javafx.swing']
 }
 repositories {
     // Use jcenter for resolving your dependencies.
