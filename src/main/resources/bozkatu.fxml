@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ehu.isad.controller.ui.BozkatuController">
    <children>
       <ImageView fitHeight="146.0" fitWidth="263.0" layoutX="169.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
@@ -26,7 +25,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ComboBox fx:id="cbox" layoutX="162.0" layoutY="200.0" prefHeight="35.0" prefWidth="279.0" promptText="Herrialdea" />
+      <ComboBox fx:id="cbox" layoutX="162.0" layoutY="200.0" prefHeight="35.0" prefWidth="279.0" promptText="Herrialdea" visibleRowCount="4" />
       <Button layoutX="274.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClick" prefHeight="28.0" prefWidth="53.0" text="OK" />
    </children>
 </AnchorPane>

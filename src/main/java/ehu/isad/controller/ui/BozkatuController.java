@@ -28,7 +28,12 @@ public class BozkatuController {
 
     @FXML
     void onClick(ActionEvent event) {
-        System.out.println(cbox.getSelectionModel().toString());
+        Herrialdea aukera = cbox.getValue();
+        if (EurobisioaDBKud.getInstantzia().bozkatuDu(aukera.getIzena(), main.getUrtea())){
+            main.erroreaErakutsi(aukera);
+        }else{
+            main.bozkatu(cbox.getValue());
+        }
     }
     @FXML
     void initialize() {
