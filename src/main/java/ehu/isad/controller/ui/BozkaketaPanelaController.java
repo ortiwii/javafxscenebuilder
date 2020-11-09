@@ -149,22 +149,18 @@ public class BozkaketaPanelaController {
     public void konfiguratu(Herrialdea herrialdea){
 
         this.norkBozkatu = herrialdea;
-        String text = this.label.getText();
-        text = herrialdea.getIzena()+"k"+text;
+        String text = herrialdea.getIzena()+"k horrela nahi ditu bere puntuak banatu:";
         this.label.setText(text);
         Image image = new Image(getClass().getResourceAsStream("/irudiak/"+herrialdea.getIrudia()+".png"));
         this.herrialdeIrudia.setImage(image);
         this.puntuakHasieratu();
+        tbData.refresh();
     }
     private void puntuakHasieratu (){
         this.puntuEskuragarriak = 5;
         for (int i = 0; i < ordezkaritzaModels.size(); i++){
             OrdezkaritzaModel act = ordezkaritzaModels.get(i);
-//            if (act.getHerrialdea().equals(this.norkBozkatu.getIzena())){ // Puntu kop = "--"
-//                act.setPuntuKop(null);
-//            }else{
                 act.setPuntuKop(0);
-//            }
         }
 
     }

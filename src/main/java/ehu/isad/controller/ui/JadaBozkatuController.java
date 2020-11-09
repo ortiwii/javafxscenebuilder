@@ -23,7 +23,7 @@ public class JadaBozkatuController {
         main.herrialdeaAukeratuMenua();
     }
     public void prestatu(Herrialdea herrialdea){
-        this.text.setText(herrialdea.getIzena()+this.text.getText());
+        this.text.setText(herrialdea.getIzena()+"k jada banatu ditu bere puntuak");
         this.irudia.setImage(new Image(getClass().getResourceAsStream("/irudiak/"+herrialdea.getIrudia()+".png")));
     }
     public void setMainApp(Main main){
